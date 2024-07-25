@@ -9,6 +9,6 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World! I am learning Jenkins." );
-        System.out.println( "It is 25 July. Learning is fun." );
+        System.out.println( "I am learning Jenkins on 25 July. Learning is fun." );
     }
 }
