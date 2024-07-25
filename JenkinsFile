@@ -23,14 +23,6 @@ pipeline{
 			}
 		
 		}
-		stage("Build"){
-			steps{
-				echo "Start Build"
-				bat "mvn install -DskipTests"
-				echo "Build completed"
-			}
-		
-		}
 		stage("Sonar"){
 			steps{
 				echo "Start Sonar"
@@ -39,7 +31,15 @@ pipeline{
 			}
 		
 		}
-	
+		stage("Build"){
+			steps{
+				echo "Start Build"
+				bat "mvn install -DskipTests"
+				echo "Build completed"
+			}
+		
+		}
+
 	
 	
 	}
