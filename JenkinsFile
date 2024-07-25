@@ -1,0 +1,40 @@
+pipeline{
+	agent any
+	tools{
+		maven 'maven_3.8.7'
+		jdk 'JDK21'
+	}
+	stages
+	{
+		stage("Clean"){
+			steps{
+				echo "Start Clean"
+				bat "mvn clean"
+			}
+		
+		}
+		stage("Test"){
+			steps{
+				echo "Start Test"
+				bat "mvn test"
+			}
+		
+		}
+		stage("Build"){
+			steps{
+				echo "Start Build"
+				bat "mvn install -DskipTests"
+			}
+		
+		}
+	
+	
+	
+	}
+
+
+
+
+
+
+}
